@@ -21,9 +21,19 @@ class Square implements Drawable{
    String getName(){
       return "square";
    } 
+   /*
+     changes the position of the square then redraws it on screen
+   */
+   void changePos(int xPos, int yPos){
+     this.xPos = xPos;
+     this.yPos = yPos;
+     redraw();
+   }
+   
    void redraw(){
      stroke(outlineColour.getRGB());
      fill(fillColour.getRGB());
      rect(xPos, yPos, squareWidth, squareWidth);
    }
+   
 }
