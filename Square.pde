@@ -29,7 +29,12 @@ class Square implements Drawable{
      this.yPos = yPos;
      redraw();
    }
-   
+   void setOutlineColour(Color colour){
+       outlineColour = colour;
+   }
+   void setFillColour(Color colour){
+      fillColour = colour; 
+   }
    void redraw(){
      stroke(outlineColour.getRGB());
      fill(fillColour.getRGB());

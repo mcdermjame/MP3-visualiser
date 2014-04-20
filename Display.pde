@@ -12,4 +12,8 @@ class Display{
     Square square = new Square(100,150,100, new Color(255, 150, 42), new Color(100, 100, 100));
   }
   
+  void drawTitle(String title){
+     text("Current file: " + title, 50, 50); 
+  }
+  
 }

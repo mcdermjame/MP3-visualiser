@@ -9,6 +9,8 @@
 void setup(){
    size(displayWidth, displayHeight);
    Display display = new Display();
+   Audio audio = new Audio();
+   display.drawTitle(audio.getTitle());
 }
 void loop(){
   
