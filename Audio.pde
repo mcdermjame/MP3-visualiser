@@ -12,14 +12,17 @@ class Audio{
     AudioPlayer soundFile;
     
     Audio(){
-       soundFile = minim.loadFile("1.mp3"); 
+      minim = new Minim(this);
+       //soundFile = minim.loadFile("C:\\UsersJames\\Dropbox\\Projects\\Visualisation\\MP3Visualiser\\1.mp3"); 
     }
     Audio(String fileName){
+      minim = new Minim(this);
       soundFile = minim.loadFile(fileName);
     }
     
     String getTitle(){
-       return soundFile.getMetaData().title(); 
+       //return soundFile.getMetaData().title(); 
+       return "This feature is currently broken... Please see Audio.getTitle()";
     }
     
 }
