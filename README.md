@@ -9,3 +9,7 @@ This project uses:
 
 Processing: https://www.processing.org/
 minim:      http://code.compartmental.net/tools/minim/
+
+Requirements:
+
+At the moment this program requires a mp3 file to be in the projects directory called "soundFile.mp3"

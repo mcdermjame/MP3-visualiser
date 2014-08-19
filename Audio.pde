@@ -9,20 +9,24 @@ import ddf.minim.*;
 
 class Audio{
     Minim minim;
-    AudioPlayer soundFile;
+    AudioPlayer player;
     
     Audio(){
       minim = new Minim(this);
-       //soundFile = minim.loadFile("C:\\UsersJames\\Dropbox\\Projects\\Visualisation\\MP3Visualiser\\1.mp3"); 
     }
     Audio(String fileName){
       minim = new Minim(this);
-      soundFile = minim.loadFile(fileName);
+      player = minim.loadFile("soundFile.mp3");
+      player.play();
     }
     
     String getTitle(){
-       //return soundFile.getMetaData().title(); 
-       return "This feature is currently broken... Please see Audio.getTitle()";
-    }
+       try{
+           return player.getMetaData().title(); 
+       }catch(Exception e){
+          return "This feature is currently broken... Please see Audio.getTitle()";
+       }
+   }
+   
     
 }
