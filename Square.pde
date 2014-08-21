@@ -29,6 +29,15 @@ class Square implements Drawable{
      this.yPos = yPos;
      redraw();
    }
+   /*
+     Changes the position of the square by a change in x and a change in y
+     TODO: decide on wether to implement bounds checking.
+   */
+   void changePosDelta(int dX, int dY){
+      this.xPos += dX;
+      this.yPos += dY;
+     redraw(); 
+   }
    void setOutlineColour(Color colour){
        outlineColour = colour;
    }
