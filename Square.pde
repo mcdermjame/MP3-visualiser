@@ -38,6 +38,12 @@ class Square implements Drawable{
       this.yPos += dY;
      redraw(); 
    }
+   boolean isOnScreen(){
+      if ((xPos > width) && (yPos > height)){
+         return false; 
+      }
+      return true;
+   }
    void setOutlineColour(Color colour){
        outlineColour = colour;
    }
